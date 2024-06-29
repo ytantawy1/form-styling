@@ -1,0 +1,208 @@
+:root {
+	--blue: #6593A6;
+	--grey: #58595B;
+	--yellow: #F2CF63;
+	--orange: #F2C063;
+	--white: #F2F2F2;
+}
+
+/* Utility Classes */
+
+.container {
+	margin: auto;
+	max-width: 1024px;
+}
+
+.sr-only {
+	position: absolute;
+	left: -9999px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+/* Typography */
+
+body {
+	background-color: var(--grey);
+	font-family: 'Karla', sans-serif;
+}
+
+h2 {
+	margin-bottom: 1rem;
+}
+
+/* Header */
+
+header {
+	background-color: var(--blue);
+	padding: 1rem;
+}
+
+header img {
+	height: 4rem;
+}
+
+.upper-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-toggle {
+	cursor: pointer;
+}
+
+.menu-toggle svg path {
+	fill: var(--white);
+}
+
+.menu-toggle:hover svg path,
+.menu-toggle:hover p {
+	fill: var(--orange);
+	color: var(--orange);
+	transition: 0.3s all ease-in-out;
+}
+
+.menu-toggle p {
+	color: var(--white);
+	text-align: center;
+}
+
+/* Search Form */
+
+header form {
+	margin: 1.5rem 0 0 0;
+	display: flex;
+}
+
+input[name="search-bar"] {
+	width: 100%;
+	padding: 0.5rem;
+	border-radius: 0.4rem 0 0 0.4rem;
+	border: none;
+}
+
+.magnifying-glass {
+	position: relative;
+}
+
+header input[type=submit] {
+	height: 40px;
+	width: 40px;
+	background-color: var(--orange);
+	color: var(--cream);
+	border: none;
+	border-radius: 0 0.4rem 0.4rem 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.magnifying-glass svg {
+	width: 1.8rem;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+.magnifying-glass svg path {
+	fill: var(--grey);
+}
+
+/* LOGIN FORM */
+
+main {
+	padding: 2rem 1rem;
+}
+
+main .container {
+	background-color: var(--white);
+	padding: 2rem 1rem;
+	border-radius: 0.4rem;
+}
+
+main form label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+main form div {
+	margin-bottom: 1rem;
+}
+
+main .login {
+	padding-bottom: 2rem;
+	border-bottom: 2px dashed var(--grey);
+	margin-bottom: 2rem;
+}
+
+.login form input {
+	width: 100%;
+	background-color: white;
+	border: 1px solid var(--blue);
+	border-radius: 0.4rem;
+	padding: 0.5rem;
+}
+
+.login form input[type=email]:invalid,
+.login form input[type=password]:invalid {
+	background: url('../img/exclamation.svg') 95% / 1rem no-repeat white;
+}
+
+.login form input[type=email]:valid,
+.login form input[type=password]:valid {
+	background: url('../img/check.svg') 95% / 1rem no-repeat white;
+}
+
+.login form input[type="submit"] {
+	width: 100%;
+	background: var(--orange);
+	margin-top: 1rem;
+	border: none;
+	letter-spacing: 0.1rem;
+	text-transform: lowercase;
+	cursor: pointer;
+}
+
+/* Sign-Up Area */
+
+.sign-up p {
+	margin-bottom: 1rem;
+}
+
+.sign-up a {
+	display: inline-block;
+	background-color: var(--blue);
+	padding: 1rem 2rem;
+	border-radius: 0.4rem;
+	margin-top: 1rem;
+	color: white;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 720px) {
+	main .container {
+		display: flex;
+		padding: 2rem 0;
+	}
+
+	main .login {
+		min-width: calc(100% / 3);
+		padding: 2rem;
+		border-bottom: none;
+		border-right: 2px dashed var(--grey);
+	}
+
+	main .sign-up {
+		padding: 2rem;
+		max-width: 60ch;
+	}
+}
+
+
+
+
